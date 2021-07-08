@@ -1,15 +1,15 @@
 @import "./variables";
 header {
-  // position: relative;
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: space-between;
+  position: relative;
   padding: 1rem 4rem;
-  // background-color: $light-blue;
   #burgerButton {
     font-size: 1.5em;
     color: $base-color;
     cursor: pointer;
+    margin-right: 2vh;
+  }
+  .wide-nav-links {
+    display: none;
   }
   .logo {
     font-size: 1.5em;
@@ -35,7 +35,6 @@ header {
       color: $base-color;
       font-size: 1.5em;
       cursor: pointer;
-      margin-left: 3vh;
       position: relative;
       i {
         font-size: 0.8em;
@@ -71,7 +70,6 @@ header {
   }
   #header-links {
     position: absolute;
-    display: none;
     top: 5vh;
     left: 0;
     width: 100%;
@@ -123,8 +121,14 @@ header {
       background-color: white;
       font-size: 1.2em;
       padding: 1vh;
-      margin-left: 2vh;
-      box-shadow: 0px 5px 10px 0px #7c7c7c;
+      margin-left: 3vh;
+      box-shadow: 0px 5px 5px 0px #bdbdbd;
+      transition: 0.3s;
+      cursor: pointer;
+      &:hover {
+        background-color: $light-blue;
+        box-shadow: none;
+      }
       .arrow {
         margin-left: 1vh;
       }

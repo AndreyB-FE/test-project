@@ -74,6 +74,7 @@ body {
     }
   }
 }
+// some general styles
 .intro-text {
   margin-top: 1vh;
   margin-bottom: 2vh;
@@ -138,7 +139,8 @@ body {
         grid-template-rows: auto auto auto;
         grid-auto-rows: 100px;
         gap: 0 1vh;
-        grid-template-areas:
+        grid-template-areas: //3 rows template-areas
+
           "form-email form-subject"
           "form-text form-text"
           "submit-contact-form submit-contact-form";
@@ -165,30 +167,64 @@ body {
       }
     }
   }
+  header {
+    padding-top: 3rem;
+    .logo {
+      position: absolute;
+      top: -3vh;
+      left: 0;
+    }
+    .wide-nav-links {
+      display: block;
+      color: $base-color;
+      text-decoration: none;
+      .nav-link {
+        color: $base-color;
+        text-decoration: none;
+        margin-right: 2vh;
+        font-size: 1em;
+        &:hover {
+          text-decoration: underline;
+        }
+        &:last-of-type {
+          margin: 0;
+        }
+      }
+    }
+    .dropdown-lang {
+      .switch-lang {
+        font-size: 1em;
+      }
+    }
+
+    .right-side {
+      display: flex;
+      align-items: center;
+    }
+    #burgerButton {
+      display: none;
+    }
+    .header-container {
+      position: relative;
+      .contact-us {
+        display: block;
+      }
+    }
+  }
+
   .slider-block {
     .slide {
       flex-direction: row;
-      padding: 2vh 0;
       .info-slide-block {
-        padding: 10vh 2vh;
-        .intro-text-slide {
-          font-size: 2em;
-          color: $base-color;
-          font-weight: 600;
-          margin-bottom: 2vh;
-        }
-        p {
-          color: gray;
-          font-size: 1em;
-          line-height: 1.5rem;
-          margin-bottom: 1vh;
-        }
+        padding: 10vh 0;
         .buttons-block {
           display: block;
         }
       }
 
       .img-wrapper {
+        display: flex;
+        align-items: center;
         .slide-img {
           position: absolute;
           width: 100%;
@@ -196,6 +232,20 @@ body {
           max-width: none;
         }
       }
+    }
+  }
+}
+
+@media screen and (min-width: 1450px) {
+  header {
+    padding-top: 1rem;
+    .logo {
+      position: absolute;
+      top: 2vh;
+      left: 10%;
+    }
+    .header-container {
+      position: static;
     }
   }
 }

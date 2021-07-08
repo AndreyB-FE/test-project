@@ -39,3 +39,24 @@
 .slider-block .slide .img-wrapper .slide-img {
   width: 100%;
 }
+
+.slider-block .arrow {
+  position: absolute;
+  top: 50%;
+  color: #354580;
+  font-size: 3em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.slider-block .arrow:hover {
+  opacity: 0.66;
+}
+
+.slider-block .arrow-prev {
+  left: -3%;
+}
+
+.slider-block .arrow-next {
+  right: -3%;
+}

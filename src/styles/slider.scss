@@ -1,5 +1,5 @@
 @import "./variables.scss";
-
+// slick- slider
 .slider-block {
   .slide {
     flex-direction: column;
@@ -36,5 +36,23 @@
         width: 100%;
       }
     }
+  }
+  // slick arrows customization--
+  .arrow {
+    position: absolute;
+    top: 50%;
+    color: $base-color;
+    font-size: 3em;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      opacity: 0.66;
+    }
+  }
+  .arrow-prev {
+    left: -3%;
+  }
+  .arrow-next {
+    right: -3%;
   }
 }
