@@ -1,6 +1,6 @@
 let grid = document.getElementById("portfolioGrid");
+let menu = document.getElementById("header-links");
 document.getElementById("burgerButton").addEventListener("click", () => {
-  let menu = document.getElementById("header-links");
   if (menu.style.display == "none") {
     menu.style.display = "flex";
     document.body.className = "stop-scrolling";
@@ -25,4 +25,10 @@ window.onload = () => {
       },
     ],
   });
+};
+
+window.onresize = () => {
+  if (window.innerWidth > 768) {
+    menu.style.display = "none";
+  }
 };
