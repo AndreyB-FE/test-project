@@ -1,0 +1,41 @@
+.slider-block .slide {
+  flex-direction: column;
+  padding: 2vh 0;
+}
+
+.slider-block .slide .info-slide-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5vh 0;
+}
+
+.slider-block .slide .info-slide-block .intro-text-slide {
+  font-size: 2em;
+  color: #354580;
+  font-weight: 600;
+  margin-bottom: 2vh;
+}
+
+.slider-block .slide .info-slide-block p {
+  color: gray;
+  font-size: 1em;
+  line-height: 1.5rem;
+  margin-bottom: 1vh;
+  text-align: justify;
+}
+
+.slider-block .slide .info-slide-block .buttons-block {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1vh;
+}
+
+.slider-block .slide .img-wrapper {
+  min-width: 50%;
+  position: relative;
+}
+
+.slider-block .slide .img-wrapper .slide-img {
+  width: 100%;
+}

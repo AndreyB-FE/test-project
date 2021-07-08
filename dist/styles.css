@@ -1,6 +1,6 @@
 @font-face {
   font-family: Alternates;
-  src: url(../fonts/MontserratAlternates-Regular.ttf);
+  src: url(../src/fonts/MontserratAlternates-Regular.ttf);
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -8,21 +8,21 @@
 
 @font-face {
   font-family: Alternates;
-  src: url(../fonts/MontserratAlternates-Medium.ttf);
+  src: url(../src/fonts/MontserratAlternates-Medium.ttf);
   font-weight: 500;
   font-display: swap;
 }
 
 @font-face {
   font-family: Alternates;
-  src: url(../fonts/MontserratAlternates-Thin.ttf);
+  src: url(../src/fonts/MontserratAlternates-Thin.ttf);
   font-weight: 100;
   font-display: swap;
 }
 
 @font-face {
   font-family: Alternates;
-  src: url(../fonts/MontserratAlternates-ExtraBold.ttf);
+  src: url(../src/fonts/MontserratAlternates-ExtraBold.ttf);
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -30,7 +30,7 @@
 
 @font-face {
   font-family: Alternates;
-  src: url(../fonts/MontserratAlternates-Bold.ttf);
+  src: url(../src/fonts/MontserratAlternates-Bold.ttf);
   font-weight: 700;
   font-style: bold;
   font-display: swap;
@@ -38,7 +38,7 @@
 
 @font-face {
   font-family: NotoSansJP;
-  src: url(../fonts/NotoSansJP-Black.otf);
+  src: url(../src/fonts/NotoSansJP-Black.otf);
   font-weight: 900;
   font-style: thick;
   font-display: swap;
@@ -46,7 +46,7 @@
 
 @font-face {
   font-family: NotoSansJP;
-  src: url(../fonts/NotoSansJP-Medium.otf);
+  src: url(../src/fonts/NotoSansJP-Medium.otf);
   font-weight: 500;
   font-style: medium;
   font-display: swap;
@@ -54,7 +54,7 @@
 
 @font-face {
   font-family: NotoSansJP;
-  src: url(../fonts/NotoSansJP-Regular.otf);
+  src: url(../src/fonts/NotoSansJP-Regular.otf);
   font-weight: 400;
   font-style: regular;
   font-display: swap;
@@ -62,7 +62,7 @@
 
 @font-face {
   font-family: NotoSansJP;
-  src: url(../fonts/NotoSansJP-Light.otf);
+  src: url(../src/fonts/NotoSansJP-Light.otf);
   font-weight: 300;
   font-style: light;
   font-display: swap;
@@ -70,7 +70,7 @@
 
 @font-face {
   font-family: NotoSansJP;
-  src: url(../fonts/NotoSansJP-Thin.otf);
+  src: url(../src/fonts/NotoSansJP-Thin.otf);
   font-weight: 100;
   font-style: thin;
   font-display: swap;
@@ -210,4 +210,434 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/*# sourceMappingURL=styles.css.map */
+
+header {
+  padding: 1rem 4rem;
+}
+
+header #burgerButton {
+  font-size: 1.5em;
+  color: #354580;
+  cursor: pointer;
+}
+
+header .logo {
+  font-size: 1.5em;
+  color: #354580;
+  font-weight: bold;
+  position: relative;
+}
+
+header .logo::before {
+  position: absolute;
+  content: "";
+  width: 47%;
+  height: 5px;
+  border-radius: 2px;
+  background-color: red;
+  left: 29%;
+  bottom: -5px;
+}
+
+header .dropdown-lang {
+  position: relative;
+  display: inline-block;
+}
+
+header .dropdown-lang .switch-lang {
+  color: #354580;
+  font-size: 1.5em;
+  cursor: pointer;
+  margin-left: 3vh;
+  position: relative;
+}
+
+header .dropdown-lang .switch-lang i {
+  font-size: 0.8em;
+}
+
+header .dropdown-lang .drop-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f5fafe;
+  min-width: 80px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  text-align: right;
+  border-radius: 3px;
+  z-index: 4;
+}
+
+header .dropdown-lang .drop-content .language {
+  color: #354580;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+header .dropdown-lang .drop-content .language:hover {
+  text-decoration: underline;
+}
+
+header .dropdown-lang:hover .drop-content {
+  display: block;
+}
+
+header #header-links {
+  position: absolute;
+  display: none;
+  top: 5vh;
+  left: 0;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2vh;
+  padding-bottom: 2vh;
+  background-color: white;
+  border-bottom: 2px solid #354580;
+  z-index: 3;
+  box-shadow: 0px 18px 15px 0px rgba(0, 0, 0, 0.75);
+}
+
+header #header-links .nav-link {
+  color: #354580;
+  text-decoration: none;
+  margin: 0.5vh 0;
+  font-size: 1.5em;
+}
+
+header #header-links .nav-link:hover {
+  text-decoration: underline;
+}
+
+header #header-links .social-media {
+  margin-top: 2vh;
+}
+
+header #header-links .social-media .social-link {
+  color: #354580;
+  margin: 0 1rem;
+  font-size: 1.7em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+header #header-links .social-media .social-link:hover {
+  transform: scale(1.2);
+}
+
+header .right-side {
+  display: flex;
+}
+
+header .header-container {
+  width: 100%;
+  max-width: 992px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .header-container .contact-us {
+  display: none;
+  color: red;
+  background-color: white;
+  font-size: 1.2em;
+  padding: 1vh;
+  margin-left: 2vh;
+  box-shadow: 0px 5px 10px 0px #7c7c7c;
+}
+
+header .header-container .contact-us .arrow {
+  margin-left: 1vh;
+}
+
+footer {
+  padding: 3vh 0;
+  background-color: #354580;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+footer > * {
+  margin: 1vh 0;
+}
+
+footer .slogan {
+  font-size: 1.5em;
+  color: red;
+}
+
+footer .footer-links {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .footer-links .nav-link {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  margin: 0.25vh 0;
+  font-size: 1.2em;
+  transition: 0.2s;
+}
+
+footer .footer-links .nav-link::before {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  left: 0;
+  bottom: -3px;
+  transition: 0.2s;
+}
+
+footer .footer-links .nav-link:hover::before {
+  width: 100%;
+}
+
+footer .social-media .social-link {
+  margin: 0 1rem;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+footer .social-media .social-link:hover {
+  transform: scale(1.1);
+}
+
+.slider-block .slide {
+  flex-direction: column;
+  padding: 2vh 0;
+}
+
+.slider-block .slide .info-slide-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5vh 0;
+}
+
+.slider-block .slide .info-slide-block .intro-text-slide {
+  font-size: 2em;
+  color: #354580;
+  font-weight: 600;
+  margin-bottom: 2vh;
+}
+
+.slider-block .slide .info-slide-block p {
+  color: gray;
+  font-size: 1em;
+  line-height: 1.5rem;
+  margin-bottom: 1vh;
+  text-align: justify;
+}
+
+.slider-block .slide .info-slide-block .buttons-block {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1vh;
+}
+
+.slider-block .slide .img-wrapper {
+  min-width: 50%;
+  position: relative;
+}
+
+.slider-block .slide .img-wrapper .slide-img {
+  width: 100%;
+}
+
+body {
+  font-family: NotoSansJP;
+}
+
+.container {
+  padding: 2rem 2rem;
+  max-width: 992px;
+  margin: 0 auto;
+}
+
+.container .contact-us-block .contact-text {
+  color: red;
+}
+
+.container .contact-us-block .form-grid {
+  margin-bottom: 2vh;
+  display: grid;
+}
+
+.container .contact-us-block .form-grid input {
+  margin: 0.25vh 0;
+  height: 2.5vh;
+  background-color: #f5fafe;
+  border: none;
+  color: #354580;
+  font-weight: 600;
+  border-radius: 3px;
+  padding: 1vh 0 1vh 1vh;
+  font-size: 1.1em;
+}
+
+.container .contact-us-block .form-grid input::placeholder {
+  color: #354580;
+}
+
+.container .contact-us-block .form-grid .form-text {
+  margin-top: 1vh;
+  height: 7vh;
+}
+
+.container .portfolio-block {
+  margin: 10vh 0;
+}
+
+.container .portfolio-block #portfolioGrid {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-gap: 1vh;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.container .portfolio-block #portfolioGrid .portfolio-item {
+  height: 23vh;
+  background-color: #c3d0d8;
+}
+
+.container .portfolio-block #seeMore {
+  display: block;
+  margin-top: 1vh;
+  color: red;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.container .portfolio-block #seeMore:hover {
+  text-decoration: underline;
+}
+
+.intro-text {
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+  color: #354580;
+  font-size: 1.7em;
+  font-weight: 600;
+}
+
+.btn-red {
+  display: inline-block;
+  margin: 1vh auto 0;
+  color: white;
+  padding: 1vh 2vh;
+  background-color: red;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 2;
+}
+
+.btn-red:hover {
+  box-shadow: 0px 0px 10px 0px #000000;
+}
+
+.btn-transparent {
+  margin: 1vh auto 0;
+  color: #354580;
+  background-color: transparent;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  padding: 1vh 2vh;
+  z-index: 2;
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 556px) {
+  .container .portfolio-block #portfolioGrid {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    max-width: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container .portfolio-block #portfolioGrid {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: none;
+  }
+  .container .contact-us-block .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-auto-rows: 100px;
+    gap: 0 1vh;
+    grid-template-areas: "form-email form-subject" "form-text form-text" "submit-contact-form submit-contact-form";
+  }
+  .container .contact-us-block .form-email {
+    grid-area: form-email;
+  }
+  .container .contact-us-block .form-subject {
+    grid-area: form-subject;
+  }
+  .container .contact-us-block .form-text {
+    grid-area: form-text;
+  }
+  .container .contact-us-block .submit-contact-form {
+    grid-area: submit-contact-form;
+  }
+  footer .footer-links {
+    flex-direction: row;
+  }
+  footer .footer-links .nav-link {
+    margin: 0 1vh;
+  }
+  .slider-block .slide {
+    flex-direction: row;
+    padding: 2vh 0;
+  }
+  .slider-block .slide .info-slide-block {
+    padding: 10vh 2vh;
+  }
+  .slider-block .slide .info-slide-block .intro-text-slide {
+    font-size: 2em;
+    color: #354580;
+    font-weight: 600;
+    margin-bottom: 2vh;
+  }
+  .slider-block .slide .info-slide-block p {
+    color: gray;
+    font-size: 1em;
+    line-height: 1.5rem;
+    margin-bottom: 1vh;
+  }
+  .slider-block .slide .info-slide-block .buttons-block {
+    display: block;
+  }
+  .slider-block .slide .img-wrapper .slide-img {
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    max-width: none;
+  }
+}

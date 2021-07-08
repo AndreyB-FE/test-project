@@ -1,0 +1,40 @@
+@import "./variables.scss";
+
+.slider-block {
+  .slide {
+    flex-direction: column;
+    padding: 2vh 0;
+    .info-slide-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 5vh 0;
+      .intro-text-slide {
+        font-size: 2em;
+        color: $base-color;
+        font-weight: 600;
+        margin-bottom: 2vh;
+        // text-align: justify;
+      }
+      p {
+        color: gray;
+        font-size: 1em;
+        line-height: 1.5rem;
+        margin-bottom: 1vh;
+        text-align: justify;
+      }
+      .buttons-block {
+        display: flex;
+        flex-direction: column;
+        padding: 0 1vh;
+      }
+    }
+    .img-wrapper {
+      min-width: 50%;
+      position: relative;
+      .slide-img {
+        width: 100%;
+      }
+    }
+  }
+}

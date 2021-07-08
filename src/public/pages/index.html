@@ -8,6 +8,140 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>hello</h1>
+    <header>
+      <div class="header-container">
+        <h2 class="logo">Doob</h2>
+
+        <nav id="header-links" style="display: none">
+          <a href="#" class="nav-link">Home.</a>
+          <a href="#" class="nav-link">About us.</a>
+          <a href="#" class="nav-link">Portfolio.</a>
+          <a href="#" class="nav-link">Blog.</a>
+          <a href="#" class="nav-link">Contact us.</a>
+          <div class="social-media">
+            <a class="social-link fab fa-facebook-f"></a>
+            <a class="social-link fab fa-twitter"></a>
+            <a class="social-link fab fa-youtube"></a>
+          </div>
+        </nav>
+        <div class="right-side">
+          <i id="burgerButton" class="fas fa-bars"></i>
+          <div class="dropdown-lang">
+            <div class="switch-lang">EN<i class="fas fa-caret-down"></i></div>
+            <div class="drop-content">
+              <a class="language">RUS</a>
+              <a class="language">EN</a>
+              <a class="language">GER</a>
+            </div>
+          </div>
+          <div class="contact-us">
+            Contact Us<i class="arrow fas fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="slider-block">
+        <div class="slide">
+          <div class="info-slide-block">
+            <div class="intro-text-slide">
+              The Spirit of <br />Digital Agency.
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+              voluptas temporibus dolorem modi non quam?
+            </p>
+            <div class="buttons-block">
+              <a class="btn-red">More About us</a>
+              <a class="btn-transparent">Get in Touch</a>
+            </div>
+          </div>
+          <div class="img-wrapper">
+            <img
+              src="../assets/Technology-Flat-Illustration.jpg"
+              alt="main image"
+              class="slide-img"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-block">
+        <p class="intro-text">
+          See some of our <br />
+          Creative work.
+        </p>
+        <div id="portfolioGrid">
+          <div class="portfolio-item"></div>
+          <div class="portfolio-item"></div>
+          <div class="portfolio-item"></div>
+          <div class="portfolio-item"></div>
+          <div class="portfolio-item"></div>
+          <div class="portfolio-item"></div>
+        </div>
+        <div href="" id="seeMore">See More of These</div>
+      </div>
+      <div class="contact-us-block">
+        <p class="contact-text">CONTACT US</p>
+        <p class="intro-text">Get In Touch</p>
+        <form action="#" method="post">
+          <div class="form-grid">
+            <input
+              class="form-email"
+              type="text"
+              name="email"
+              placeholder="Your email"
+              required
+            />
+            <input
+              class="form-subject"
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              required
+            />
+            <input
+              class="form-text"
+              type="text"
+              name="message"
+              placeholder="Message here.."
+              required
+            />
+            <button
+              id="submit-contact-form"
+              class="submit-contact-form btn-red"
+              type="submit"
+            >
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <h2>DOOB</h2>
+      <p class="slogan">CREATIVITY ABOVE</p>
+      <nav class="footer-links">
+        <a href="#" class="nav-link">Home.</a>
+        <a href="#" class="nav-link">About us.</a>
+        <a href="#" class="nav-link">Portfolio.</a>
+        <a href="#" class="nav-link">Blog.</a>
+        <a href="#" class="nav-link">Contact us.</a>
+      </nav>
+      <p class="copyright">© 2019 - Doob. All rights reserved</p>
+      <div class="social-media">
+        <a class="social-link fab fa-facebook-f"></a>
+        <a class="social-link fab fa-twitter"></a>
+        <a class="social-link fab fa-youtube"></a>
+      </div>
+    </footer>
+    <script src="../../js/index.js"></script>
+    <script src="../../libs/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../../libs/slick/slick-theme.css" />
+    <link rel="stylesheet" href="../../libs/slick/slick.css" />
+    <script src="../../libs/slick/slick.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/e17f2cfa96.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

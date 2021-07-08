@@ -1,2 +1,201 @@
 @import "./fonts.scss";
 @import "./reset.scss";
+@import "./header.scss";
+@import "./footer.scss";
+@import "./variables";
+@import "./slider.scss";
+
+body {
+  font-family: NotoSansJP;
+}
+
+.container {
+  padding: 2rem 2rem;
+  max-width: 992px;
+  margin: 0 auto;
+  //   блок contact us --------------------
+  .contact-us-block {
+    .contact-text {
+      color: red;
+    }
+    .form-grid {
+      margin-bottom: 2vh;
+      display: grid;
+      input {
+        margin: 0.25vh 0;
+        height: 2.5vh;
+        background-color: $light-blue;
+        border: none;
+        color: $base-color;
+        font-weight: 600;
+        border-radius: 3px;
+        padding: 1vh 0 1vh 1vh;
+        font-size: 1.1em;
+        &::placeholder {
+          color: $base-color;
+        }
+      }
+      .form-text {
+        margin-top: 1vh;
+        height: 7vh;
+      }
+    }
+  }
+
+  // блок портфолио ---------------------------
+  .portfolio-block {
+    margin: 10vh 0;
+    #portfolioGrid {
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: 1fr;
+      grid-gap: 1vh;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 350px;
+      margin: 0 auto;
+
+      .portfolio-item {
+        height: 23vh;
+        background-color: rgba(195, 208, 216, 255);
+      }
+    }
+    #seeMore {
+      display: block;
+      margin-top: 1vh;
+      color: red;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.intro-text {
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+  color: $base-color;
+  font-size: 1.7em;
+  font-weight: 600;
+}
+.btn-red {
+  display: inline-block;
+  margin: 1vh auto 0;
+  color: white;
+  padding: 1vh 2vh;
+  background-color: red;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 2;
+  &:hover {
+    box-shadow: 0px 0px 10px 0px #000000;
+  }
+}
+.btn-transparent {
+  margin: 1vh auto 0;
+  color: $base-color;
+  background-color: transparent;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  padding: 1vh 2vh;
+  z-index: 2;
+}
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+@media screen and (min-width: 556px) {
+  .container {
+    .portfolio-block {
+      #portfolioGrid {
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        max-width: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    .portfolio-block {
+      #portfolioGrid {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: none;
+      }
+    }
+    .contact-us-block {
+      .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-auto-rows: 100px;
+        gap: 0 1vh;
+        grid-template-areas:
+          "form-email form-subject"
+          "form-text form-text"
+          "submit-contact-form submit-contact-form";
+      }
+      .form-email {
+        grid-area: form-email;
+      }
+      .form-subject {
+        grid-area: form-subject;
+      }
+      .form-text {
+        grid-area: form-text;
+      }
+      .submit-contact-form {
+        grid-area: submit-contact-form;
+      }
+    }
+  }
+  footer {
+    .footer-links {
+      flex-direction: row;
+      .nav-link {
+        margin: 0 1vh;
+      }
+    }
+  }
+  .slider-block {
+    .slide {
+      flex-direction: row;
+      padding: 2vh 0;
+      .info-slide-block {
+        padding: 10vh 2vh;
+        .intro-text-slide {
+          font-size: 2em;
+          color: $base-color;
+          font-weight: 600;
+          margin-bottom: 2vh;
+        }
+        p {
+          color: gray;
+          font-size: 1em;
+          line-height: 1.5rem;
+          margin-bottom: 1vh;
+        }
+        .buttons-block {
+          display: block;
+        }
+      }
+
+      .img-wrapper {
+        .slide-img {
+          position: absolute;
+          width: 100%;
+          margin: 0;
+          max-width: none;
+        }
+      }
+    }
+  }
+}

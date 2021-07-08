@@ -1,0 +1,55 @@
+footer {
+  padding: 3vh 0;
+  background-color: rgb(53, 69, 128);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  & > * {
+    margin: 1vh 0;
+  }
+  .slogan {
+    font-size: 1.5em;
+    color: red;
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    .nav-link {
+      position: relative;
+      color: white;
+      text-decoration: none;
+      margin: 0.25vh 0;
+      font-size: 1.2em;
+      transition: 0.2s;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 0%;
+        height: 2px;
+        background-color: white;
+        left: 0;
+        bottom: -3px;
+        transition: 0.2s;
+      }
+      &:hover {
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .social-media {
+    .social-link {
+      margin: 0 1rem;
+      font-size: 1.5em;
+      cursor: pointer;
+      transition: 0.2s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
